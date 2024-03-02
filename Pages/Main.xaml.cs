@@ -31,7 +31,7 @@ namespace ChatStudents_Kylosov.Pages
         public Main()
         {
             InitializeComponent();
-
+            LoadUsers();
             Timer.Tick += Timer_Tick;
             Timer.Start();
         }
