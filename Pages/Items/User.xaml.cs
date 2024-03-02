@@ -28,7 +28,7 @@ namespace ChatStudents_Kylosov.Pages.Items
             InitializeComponent();
         }
 
-        public User(Users user, Main main, bool online)
+        public User(Users user, Main main)
         {
             InitializeComponent();
             this.user = user;
