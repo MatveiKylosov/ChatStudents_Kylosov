@@ -6,6 +6,6 @@ namespace ChatStudents_Kylosov.Classes.Common
 {
     public class Config
     {
-        public static readonly string config = "Server=localhost;Trusted_Connection=False;Database=VPat;User=sa;Pwd=Asdfg123;";
+        public static readonly string config = "Server=127.0.0.1;Trusted_Connection=False;Database=VPat;User=sa;Pwd=Asdfg123;";
     }
 }

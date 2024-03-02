@@ -2,6 +2,7 @@
 using ChatStudents_Kylosov.Models;
 using Microsoft.Win32;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -75,12 +76,11 @@ namespace ChatStudents_Kylosov.Pages
             {
                 MainWindow.Instance.LoginUser = usersContext.Users.Where(x => x.Firstname == Firstname.Text && x.Lastname == Lastname.Text && x.Surname == Surname.Text).First();
                 MainWindow.Instance.LoginUser.Photo = File.ReadAllBytes(srcUserImage);
-                MainWindow.Instance.LoginUser.Online = DateTime.Now;
                 usersContext.SaveChanges();
             }
             else
             {
-                usersContext.Users.Add(new Users(Lastname.Text, Firstname.Text, Surname.Text, File.ReadAllBytes(srcUserImage), DateTime.Now));
+                usersContext.Users.Add(new Users(Lastname.Text, Firstname.Text, Surname.Text, File.ReadAllBytes(srcUserImage)));
                 usersContext.SaveChanges();
                 MainWindow.Instance.LoginUser = usersContext.Users.Where(x => x.Firstname == Firstname.Text && x.Lastname == Lastname.Text && x.Surname == Surname.Text).First();
             }
