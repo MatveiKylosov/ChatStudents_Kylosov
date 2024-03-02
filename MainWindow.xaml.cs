@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatStudents_Kylosov.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,16 @@ namespace ChatStudents_Kylosov
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow Instance;
+        public Users LoginUser = null;
+
         public MainWindow()
         {
             InitializeComponent();
+            Instance = this;
+            OpenPages(new Pages.Login());
         }
+
+        public void OpenPages(Page pages) => frame.Navigate(pages);
     }
 }
