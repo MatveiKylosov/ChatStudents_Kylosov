@@ -27,6 +27,7 @@ namespace ChatStudents_Kylosov.Pages.Items
             imgUser.Source = BitmapFromArrayByte.LoadImage(UserFrom.Photo);
             FIO.Content = UserFrom.ToFIO();
             tbMessage.Text = messages.Message;
+            tbDate.Text = messages.TimeMessage.ToString("HH:mm dd.MM.yyyy");
         }
     }
 }

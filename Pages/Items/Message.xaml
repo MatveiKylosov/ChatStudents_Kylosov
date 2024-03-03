@@ -13,5 +13,6 @@
         </Image>
         <Label x:Name="FIO" Content="Кылосов Матвей Михайлович" Margin="45,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="10"/>
         <TextBlock x:Name="tbMessage" Margin="50,26,0,10" TextWrapping="Wrap"/>
+        <TextBlock x:Name="tbDate" Margin="0,45,0,0" TextWrapping="Wrap" FontSize="10" Text="12:12 12.12.2012" HorizontalAlignment="Right" Width="74"/>
     </Grid>
 </UserControl>

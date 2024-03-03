@@ -71,7 +71,7 @@ namespace ChatStudents_Kylosov.Pages
         {
             if (e.Key == Key.Enter)
             {
-                Messages message = new Messages(MainWindow.Instance.LoginUser.Id, SelectedUser.Id, Message.Text);
+                Messages message = new Messages(MainWindow.Instance.LoginUser.Id, SelectedUser.Id, Message.Text, DateTime.Now);
                 messagesContext.Messages.Add(message);
                 messagesContext.SaveChanges();
                 parentMessages.Children.Add(new Pages.Items.Message(message, MainWindow.Instance.LoginUser));

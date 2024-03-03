@@ -36,7 +36,7 @@ namespace ChatStudents_Kylosov.Pages
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Выберите фотографию:";
             openFileDialog.InitialDirectory = @"C:\";
-            openFileDialog.Filter = "JPG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|All Files (*.*)|*.*";
+            openFileDialog.Filter = "PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|All Files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
             {
                 imgUser.Source = new BitmapImage(new Uri(openFileDialog.FileName));
