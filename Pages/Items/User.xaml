@@ -13,7 +13,7 @@
             </Image.Clip>
         </Image>
         <Image x:Name="imgOnline" Width="10" Height="10" Margin="30,30,0,0" HorizontalAlignment="Left" Source="/Images/ic-online.png" Visibility="Hidden"/>
-        <Label x:Name="FIO" Content="Кылосов Матвей Михайлович" Margin="45,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="10"/>
+        <Label x:Name="FIO" Content="Кылосов Матвей Михайлович (Online)" Margin="45,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="10"/>
         <Label Content="..." Margin="45,26,0,0" Width="240" VerticalAlignment="Top" FontSize="10"/>
     </Grid>
 </UserControl>

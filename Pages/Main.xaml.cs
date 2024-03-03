@@ -37,13 +37,14 @@ namespace ChatStudents_Kylosov.Pages
         }
         public void LoadUsers()
         {
-            var fiveMinutesAgo = DateTime.Now.AddMinutes(-5);
-
             foreach (Users user in usersContext.Users)
             {
                 if (user.Id != MainWindow.Instance.LoginUser.Id)
                 {
-                    parentUsers.Children.Add(new Pages.Items.User(user, this));
+                    Messages x = messagesContext.Messages.Where(m => m.UserFrom == user.Id).OrderByDescending(m => m.TimeMessage).FirstOrDefault();
+                    bool online = x != null && (DateTime.Now - x.TimeMessage).TotalMinutes <= 5;
+
+                    parentUsers.Children.Add(new Pages.Items.User(user, this, online));
                 }
             }
         }
